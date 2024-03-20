@@ -32,9 +32,7 @@ function encrypt(){
     });
     texto = palavra;
     if (window.location.pathname.includes("index.html")) {
-        console.log(window.location.pathname)
         localStorage.setItem('texto', texto);
-        console.log(window.location.href)
         window.location.href = "crypt.html";
         console.log(window.location.pathname)
     }else{
