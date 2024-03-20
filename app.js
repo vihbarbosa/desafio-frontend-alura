@@ -6,7 +6,7 @@ const O = ['o','ober'];
 const U = ['u','ufat'];
 
 if (window.location.pathname.includes("crypt.html")){
-    exibirTextoNaTela('texto_resposta',localStorage.getItem('texto'))
+    exibirTextoNaTela('resposta__texto',localStorage.getItem('texto'))
 }
 
 function validateInput(input) {
@@ -52,7 +52,7 @@ function decrypt(){
         localStorage.setItem('texto', texto);
         window.location.href = "crypt.html";
     }else{
-        exibirTextoNaTela('texto_resposta',texto);
+        exibirTextoNaTela('resposta__texto',texto);
         limparCampo()
     }
 }
