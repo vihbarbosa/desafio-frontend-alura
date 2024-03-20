@@ -5,9 +5,6 @@ const A =['a','ai'];
 const O = ['o','ober'];
 const U = ['u','ufat'];
 
-if (window.location.pathname.includes("crypt.html")){
-    exibirTextoNaTela('resposta__texto',localStorage.getItem('texto'))
-}
 
 function validateInput(input) {
     let value = input.value.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -22,7 +19,9 @@ function exibirTextoNaTela(tag,texto){
     campo.innerHTML = texto;
 }
 
-
+if (window.location.pathname.includes("crypt.html")) {
+    exibirTextoNaTela('texto_resposta',localStorage.getItem('texto'))
+}
 
 function encrypt(){
     palavra = document.querySelector('textarea').value;
@@ -33,6 +32,7 @@ function encrypt(){
     texto = palavra;
     if (window.location.pathname.includes("index.html")) {
         localStorage.setItem('texto', texto);
+        console.log(window.location.href)
         window.location.href = "crypt.html";
         console.log(window.location.pathname)
     }else{
@@ -51,8 +51,9 @@ function decrypt(){
     if (window.location.pathname.includes("index.html")) {
         localStorage.setItem('texto', texto);
         window.location.href = "crypt.html";
+        exibirTextoNaTela('texto_resposta',localStorage.getItem('texto'))
     }else{
-        exibirTextoNaTela('resposta__texto',texto);
+        exibirTextoNaTela('texto_resposta',texto);
         limparCampo()
     }
 }
