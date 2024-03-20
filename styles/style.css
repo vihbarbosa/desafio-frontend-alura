@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krona+One&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-primaria: #F3F5FC;
+    --cor-secundaria: #0A3871;
+    --cor-tercearia: #D8DFE8;
+    --cor-alerta:#495057;
+    --cor-titulo: #343A40;
+    --cor-resposta:#FFFFFF;
+
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    background-color: var(--cor-primaria);
+    gap: 24px;
+}
+
+.alura{
+    width: 120px;
+    height: 48px;
+    gap: 40px;
+    left: 40px;
+    top: 40px;
+}
+.container__botoes{
+    display: flex;
+    gap: 24px;
+    font-family: var(--fonte-primaria);
+}
+.container{
+    padding: 5%;
+}
+
+button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 24px;
+    width: 328px;
+    text-decoration: none;
+    gap: 8px;
+    font-size: 1rem;
+    border: 1px solid var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.container__botoes__cryp{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-tercearia);
+}
+
+.container__botoes__decryp{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-tercearia);
+}
+
+.container__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 450px;
+}
+
+.resposta{
+    display: flex;
+    width: 25rem;
+    height: 59rem;
+    border-radius: 2rem;
+    flex-direction: column;
+    font-family: var(--fonte-primaria);
+    align-items: center;
+    background-color: var(--cor-resposta) ;
+    padding: 2%;
+}
+
+.inicio{
+    display: flex;
+    width: 25rem;
+    height: 59rem;
+    border-radius: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--fonte-primaria);
+    align-items: center;
+    background-color: var(--cor-resposta) ;
+    padding: 2%;
+}
+
+.alerta{
+    gap:8px;
+    justify-content: center;
+    color: var(--cor-alerta);
+    font-size: 0.75rem;
+    font-family: var(--fonte-primaria);
+}
+
+textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    color: var(--cor-secundaria);
+    font-size: 2rem;
+    background-color: var(--cor-primaria);
+    width: 680px; /* largura inicial */
+    height: 288px;
+    resize: vertical;
+}
+
+h1{
+    color: var(--cor-titulo);
+    width: 336px;
+    height: 58px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-items: center;
+    line-height: 28.8px;
+}
+
+.texto{
+    width: 336px;
+    height: 16px;
+    height: 48px;
+    font-weight: 600px;
+    line-height: 24px;
+    align-items: center;
+    color: var(--cor-alerta);
+}
+
+.copiar{
+    margin-top: auto;
+    justify-content: center;
+}
+
+.resposta__texto {
+    flex: 1; /* Faz com que o elemento ocupe todo o espaço disponível na flexbox */
+    display: flex;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-alerta);
+    word-break: break-all;
+    max-width: 100%; /* Define uma largura máxima para o texto */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    justify-content: flex-start;
+}

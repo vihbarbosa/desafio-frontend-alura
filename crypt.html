@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=" stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <img class="alura" src="./assets/alura.png">
+    </header>
+    <div class="container">
+        <div class="container__texto">
+            <textarea class="input" type="text" id="inputText" placeholder="Digite seu texto" oninput="validateInput(this)"></textarea>
+            <p class="alerta"><img src="./assets/alerta.svg"> Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botoes__cryp" onclick="encrypt()" class="container__botao">Criptografar</a>
+            <button class="container__botoes__decryp"onclick="decrypt()" id="reiniciar" class="container__botao" >Descriptografar</a>
+        </div>
+    </div>
+    <div class="resposta">
+        <p class="resposta__texto" id="texto_resposta"></p>
+        <a class="copiar" onclick="copyToClipboard()" id="reiniciar" class="container__botao" >Copiar</a>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+</html>
