@@ -30,14 +30,14 @@ function encrypt(){
         palavra = palavra.replaceAll(e[0],e[1]);
     });
     texto = palavra;
-    if (window.location.pathname.includes("index.html")) {
+    if (window.location.pathname.includes("crypt.html")) {
+        exibirTextoNaTela('texto_resposta',texto);
+        limparCampo();
+    }else{
         localStorage.setItem('texto', texto);
         console.log(window.location.href)
         window.location.href = "crypt.html";
-        console.log(window.location.pathname)
-    }else{
-        exibirTextoNaTela('texto_resposta',texto);
-        limparCampo();
+        console.log(window.location.pathname);
     }
 }
 
